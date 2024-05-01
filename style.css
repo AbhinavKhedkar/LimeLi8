@@ -4933,6 +4933,13 @@ body.hidden-scroll {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'lato';
+    src: url('css/fontawesome/webfonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
 	--swiper-theme-color: #007aff
 }
