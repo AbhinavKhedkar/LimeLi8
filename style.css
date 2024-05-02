@@ -701,17 +701,6 @@ a,
 	transition: all 1s cubic-bezier(0.30, 1, 0.35, 1) 0s;
 }
 
-.post-video video,
-.post-video:after,
-.post-video {
-	-webkit-backface-visibility: hidden;
-	-webkit-transition: all 1s cubic-bezier(0.30, 1, 0.35, 1) 0s;
-	-moz-transition: all 1s cubic-bezier(0.30, 1, 0.35, 1) 0s;
-	-o-transition: all 1s cubic-bezier(0.30, 1, 0.35, 1) 0s;
-	-ms-transition: all 1s cubic-bezier(0.30, 1, 0.35, 1) 0s;
-	transition: all 1s cubic-bezier(0.30, 1, 0.35, 1) 0s;
-}
-
 .cursor-eye {
 	cursor: url(images/cursor-eye.svg), pointer;
 }
