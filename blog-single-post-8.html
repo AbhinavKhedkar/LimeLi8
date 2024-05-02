@@ -159,27 +159,115 @@
 								<h2>Gallery Block</h2>
 								<div class="row">
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image1.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image1.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(1)"></a></figure>
 									</div>
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image2.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image2.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(2)"></a></figure>
 									</div>
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image3.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image3.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(3)"></a></figure>
 									</div>
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image4.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image4.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(4)"></a></figure>
 									</div>
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image5.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image5.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(5)"></a></figure>
 									</div>
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image6.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image6.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(6)"></a></figure>
 									</div>
 									<div class="col-md-6 mb-3">
-										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image7.jpg" alt="" class="img-fluid"></a></figure>
+										<figure><a href="#"><img loading="lazy" src="images/blog/blog-8/image7.jpg" alt="" class="img-fluid" onclick="openModal();currentSlide(7)"></a></figure>
 									</div>
 								</div>
+								
+								<div id="myModal" class="modal" style="z-index: 100;">
+									<span class="close cursor" onclick="closeModal()">&times;</span>
+									<div class="modal-content">
+	
+										<div class="mySlides">
+											<div class="numbertext">1 / 7</div>
+											<img src="images/blog/blog-8/image1.jpg" style="width:100%">
+										</div>
+	
+										<div class="mySlides">
+											<div class="numbertext">2 / 7</div>
+											<img src="images/blog/blog-8/image2.jpg" style="width:100%">
+										</div>
+	
+										<div class="mySlides">
+											<div class="numbertext">3 / 7</div>
+											<img src="images/blog/blog-8/image3.jpg" style="width:100%">
+										</div>
+	
+										<div class="mySlides">
+											<div class="numbertext">4 / 7</div>
+											<img src="images/blog/blog-8/image4.jpg" style="width:100%">
+										</div>
+	
+										<div class="mySlides">
+											<div class="numbertext">5 / 7</div>
+											<img src="images/blog/blog-8/image5.jpg" style="width:100%">
+										</div>
+	
+										<div class="mySlides">
+											<div class="numbertext">6 / 7</div>
+											<img src="images/blog/blog-8/image6.jpg" style="width:100%">
+										</div>
+	
+										<div class="mySlides">
+											<div class="numbertext">7 / 7</div>
+											<img src="images/blog/blog-8/image7.jpg" style="width:100%">
+										</div>
+	
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+										<div class="caption-container">
+											<p id="caption"></p>
+										</div>
+	
+									</div>
+								</div>
+	
+								<script>
+									function openModal() {
+										document.getElementById("myModal").style.display = "block";
+									}
+	
+									function closeModal() {
+										document.getElementById("myModal").style.display = "none";
+									}
+	
+									var slideIndex = 1;
+									showSlides(slideIndex);
+	
+									function plusSlides(n) {
+										showSlides(slideIndex += n);
+									}
+	
+									function currentSlide(n) {
+										showSlides(slideIndex = n);
+									}
+	
+									function showSlides(n) {
+										var i;
+										var slides = document.getElementsByClassName("mySlides");
+										var dots = document.getElementsByClassName("demo");
+										var captionText = document.getElementById("caption");
+										if (n > slides.length) { slideIndex = 1 }
+										if (n < 1) { slideIndex = slides.length }
+										for (i = 0; i < slides.length; i++) {
+											slides[i].style.display = "none";
+										}
+										for (i = 0; i < dots.length; i++) {
+											dots[i].className = dots[i].className.replace(" active", "");
+										}
+										slides[slideIndex - 1].style.display = "block";
+										dots[slideIndex - 1].className += " active";
+										captionText.innerHTML = dots[slideIndex - 1].alt;
+									}
+								</script>
 								<blockquote class="wp-block-quote">
 									<p>"Innovation thrives in collaboration. Let's share ideas, inspire each other, and push the boundaries of what's possible."</p>
 									<cite>Tim Cook</cite>
