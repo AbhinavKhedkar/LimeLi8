@@ -205,9 +205,11 @@
 							<div class="col-md-6">
 								<h5 class="widgettitle">Main Office</h5>
 								<p style="font-family: lato;">
-									<a href="https://maps.app.goo.gl/83vHhf9R7AUvwPBY9" target="_blank">BALAJI SYMPHONY, 1201, H wing, Sukapur, New Panvel East, Panvel, Maharashtra 410206</a></br>
+									<a href="https://maps.app.goo.gl/83vHhf9R7AUvwPBY9" target="_blank">BALAJI SYMPHONY,
+										1201, H wing, Sukapur, New Panvel East, Panvel, Maharashtra 410206</a></br>
 									<a href="tel:+918857088575">+91 88570 88575</a>
-									<a href="mailto:limeli8events@gmail.com?subject=Subject%20Here&body=Body%20Text%20Here">limeli8events@gmail.com</a>
+									<a
+										href="mailto:limeli8events@gmail.com?subject=Subject%20Here&body=Body%20Text%20Here">limeli8events@gmail.com</a>
 								</p>
 							</div>
 							<!-- /col-md-6 -->
@@ -238,37 +240,54 @@
 		<!-- SECTION 2 -->
 		<div id="contact-1-2" class="contact-1-2">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 order-mobi2">
-						<div class="margin-r50">
-							<div class="gmaps">
-								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15094.41805922653!2d73.133525!3d19.0027185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e954b1d2de17%3A0x7be3e5a78a77bbb7!2sLimeLi8%20Events%20and%20Entertainment!5e0!3m2!1sen!2sro!4v1630328881798!5m2!1sen!2sro"
-									width="600" height="450" style="border:0;" allowfullscreen=""
-									loading="lazy"></iframe>
-							</div>
-						</div>
+				<!-- /col-lg-6 -->
+				<div class="margin-bm50">
+					<div id="contact-form-holder">
+						<form class="row" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+							<input type="hidden" name="access_key" value="7c881728-7b15-4cc3-a092-251bb1c92b80">
+							<label>PERSONAL DETAILS</label>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="firstName"
+									class="comm-field" placeholder="First Name" /></div>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="lastName"
+									class="comm-field" placeholder="Last Name" /> </div>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="email" class="comm-field"
+									placeholder="Email ID." /> </div>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="phone" class="comm-field"
+									placeholder="Phone NO." /> </div>
+							<label>NAME OF THE BRIDE & GROOM</label>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="brideName"
+									class="comm-field" placeholder="Name of The Bride" /></div>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="groomName"
+									class="comm-field" placeholder="Name of The Groom" /></div>
+							<label>DAY OF PHERAS</label>
+							<div class="margin-b30"><input required type="date" name="date" class="comm-field"
+									placeholder="DD-MM-YYYY" /> </div>
+							<label>WHERE ARE YOU PLANNING TO GET MARRIED</label>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="city" class="comm-field"
+									placeholder="City" /></div>
+							<div class="col-lg-6 margin-b30"><input required type="text" name="state" class="comm-field"
+									placeholder="State/UT" /> </div>
+							<div class="margin-b30"><input required type="text" name="country" class="comm-field"
+									placeholder="Country" /> </div>
+							<label>WHEN WOULD YOU LIKE US TO MEET</label>
+							<div class="col-lg-6 margin-b30"><input required type="date" name="appointmentDate"
+									class="comm-field" placeholder="DD-MM-YYYY" /> </div>
+							<div class="col-lg-6 margin-b30"><input required type="time" name="appointmentTime"
+									class="comm-field" placeholder="HH:MM" /> </div>
+							<label>REMARKS</label>
+							<div class="margin-b30"><textarea required name="message" id="msg-contact" rows="5"
+									placeholder="Your Message"></textarea></div>
+							<p><input type="submit" value="Send message" class="submit" /></p>
+						</form>
 					</div>
-					<!-- /col-lg-6 -->
-					<div class="col-lg-6 order-mobi1 margin-bm50">
-						<div id="contact-form-holder">
-							<form method="post" id="contact-form" action='include/contact-process.php'>
-								<div class="margin-b30"><input type="text" name="name" class="comm-field"
-										placeholder="Name" /></div>
-								<div class="margin-b30"><input type="text" name="email" class="comm-field"
-										placeholder="Email" /> </div>
-								<div class="margin-b30"><input type="text" name="phone" class="comm-field"
-										placeholder="Phone" /> </div>
-								<div class="margin-b30"><textarea name="message" id="msg-contact" rows="5"
-										placeholder="Message"></textarea></div>
-								<p class="antispam">Leave this empty: <input type="text" name="url" /></p>
-								<p><input type="submit" value="Send message" class="submit" /></p>
-							</form>
-						</div>
-						<!-- contact-form-holder-->
-						<div id="output-contact"></div>
+				</div>
+				<!-- /col-lg-6 -->
+				<div class="margin-t50">
+					<div class="gmaps">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15094.41805922653!2d73.133525!3d19.0027185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e954b1d2de17%3A0x7be3e5a78a77bbb7!2sLimeLi8%20Events%20and%20Entertainment!5e0!3m2!1sen!2sro!4v1630328881798!5m2!1sen!2sro"
+							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 					</div>
-					<!-- /col-lg-6 -->
 				</div>
 				<!-- /row -->
 			</div>
@@ -365,7 +384,7 @@
 	<script src='js/init.js'></script>
 	<!-- CONTACT FORM JS -->
 	<script src='js/jquery.form.min.js'></script>
-	<script src='js/contactform.js'></script>
+	<!-- <script src='js/contactform.js'></script> -->
 </body>
 
 </html>
