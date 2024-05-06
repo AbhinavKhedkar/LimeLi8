@@ -21,6 +21,8 @@
 	<link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
 	<link rel="apple-touch-icon-precomposed" href="images/icons/favicon-180x180.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
 </head>
 
 <body class="home">
@@ -244,12 +246,8 @@
 				<div class="margin-bm50">
 					<h2 class="display-4 margin-b30" style="display: flex; justify-content: center;">Book Appointment
 					</h2>
-					<!-- <p style="display: flex; justify-content: center; font-family: lato; padding-bottom: 1rem;">
-						We are super happy and excited that you or your loved one is getting married.<br />
-						Do fill in the following details so we can prepare ourselves and get in touch with you.
-					</p> -->
 					<div id="contact-form-holder"
-						style="border: solid rgb(242, 238, 238); padding: 4rem; box-shadow: 4px 4px 4px 4px;">
+						style="border: solid rgb(242, 238, 238); padding: 4rem 2rem 4rem 2rem; box-shadow: 4px 4px 4px 4px;">
 						<form class="row" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 							<input type="hidden" name="access_key" value="7c881728-7b15-4cc3-a092-251bb1c92b80">
 							<label>PERSONAL DETAILS</label>
@@ -262,10 +260,10 @@
 									placeholder="Last Name" />
 							</div>
 							<div class="col-lg-6 margin-b30">
-								<input required type="text" name="email" class="comm-field" placeholder="Email ID." />
+								<input required type="email" name="email" class="comm-field" placeholder="Email ID." />
 							</div>
 							<div class="col-lg-6 margin-b30">
-								<input required type="text" name="phone" class="comm-field" placeholder="Phone NO." />
+								<input required id="mobile_code" type="tel" name="phone" class="comm-field" placeholder="Phone NO." />
 							</div>
 							<label>NAME OF THE BRIDE & GROOM</label>
 							<div class="col-lg-6 margin-b30">
@@ -677,6 +675,18 @@
 	<!-- CONTACT FORM JS -->
 	<script src='js/jquery.form.min.js'></script>
 	<!-- <script src='js/contactform.js'></script> -->
+	<!-- intl-tel-input -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script>
+        // -----Country Code Selection
+        $("#mobile_code").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true
+        });
+    </script>
 </body>
 
 </html>

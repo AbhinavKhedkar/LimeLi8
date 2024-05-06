@@ -3839,6 +3839,11 @@ textarea {
 	color: #000000;
 }
 
+.intl-tel-input,
+.iti{
+  width: 100%;
+}
+
 #msg-contact {
 	display: block;
 }
